@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=REM:wght@200;400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  font-family: "REM", sans-serif;
+}
+
+.main-header {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6aa1c;
+}
+
+.nav-bar {
+  background-color: #bc3908;
+  color: #f6aa1c;
+  position: absolute;
+  /*   order: 0; */
+}
+.nav-bar__nav-list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0.5em;
+  gap: 0.8em;
+}
+.nav-bar__nav-item {
+  text-align: center;
+  background-color: pink;
+}
+.nav-bar__nav-link {
+  display: block;
+  background-color: purple;
+  color: #fff;
+  padding: 1em 2em;
+  text-decoration: none;
+}
+@media (max-width: 768px) {
+  .nav-bar {
+    display: none;
+  }
+}
+
+.search-bar {
+  background-color: #f6aa1c;
+  display: flex;
+  flex-direction: column;
+  /*   order: 2; */
+}
+.search-bar__logo-container {
+  padding: 1em;
+  width: 300px;
+  height: 150px;
+  background-image: url(/public/img/brucelleNaranja.png);
+}
+.search-bar__form-container {
+  padding: 1em;
+}
+.search-bar__carrito-container {
+  background-color: #bc3908;
+  padding: 1em;
+}
+.search-bar__form-label {
+  background-color: black;
+}
+.search-bar__form-search {
+  width: 81%;
+}
+
+#menu {
+  background-color: #f6aa1c;
+  /*   order: 1; */
+  display: none;
+}
+#menu:checked + .nav-bar {
+  display: block;
+}
+#menu:checked ~ .search-bar .menu-toogle__label {
+  background-color: yellow;
+}
+
+.menu-toggle {
+  display: none;
+  background-color: red;
+  flex: 0 0 3em;
+  position: relative;
+  cursor: pointer;
+}
+.menu-toggle__label {
+  display: block;
+  background-color: black;
+  height: 100%;
+}
+.menu-toggle__top-bread, .menu-toggle__meat, .menu-toggle__bottom-bread {
+  display: block;
+  background-color: #333;
+  height: 0.2em;
+  position: absolute;
+  left: 0.5em;
+  right: 0.5em;
+}
+.menu-toggle__top-bread {
+  top: 0.8em;
+}
+.menu-toggle__meat {
+  top: 50%;
+  margin-top: -0.1em;
+}
+.menu-toggle__bottom-bread {
+  bottom: 0.8em;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+
+.section-cards {
+  background-color: #bc3908;
+  padding: 2em;
+}
+.section-cards__header {
+  text-align: center;
+  color: #f6aa1c;
+}
+
+.card {
+  height: 300px;
+  width: 400px; /* 
+max-width: 450px; */
+  border-radius: 10px;
+  margin: 1.3em;
+  text-decoration: none;
+  margin-bottom: 1em;
+}
+.card__image-container {
+  height: 200px;
+  overflow: hidden; /* 
+background-color: #426b69; */
+  align-items: center;
+}
+.card__image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+}
+.card__image:hover {
+  height: 95%;
+  width: 95%;
+}
+.card__article {
+  display: flex;
+  flex-direction: column;
+  background-color: #f6aa1c;
+  border-radius: 10px;
+}
+.card__content {
+  margin: 1em;
+  background-color: #bc3908;
+  text-align: center;
+  color: #f6aa1c;
+  min-height: 7em;
+  padding: 0.5em;
+  font-size: 0.8em;
+}
+@media (max-width: 433px) {
+  .card__content {
+    font-size: 0.5em;
+  }
+}/*# sourceMappingURL=main.css.map */

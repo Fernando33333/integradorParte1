@@ -1,0 +1,51 @@
+.card {
+  &__image-container {
+    overflow: hidden;
+    align-items: center;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: cover;
+    max-height: 10em;
+    position: relative;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+  }
+
+  &__image:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+    filter: brightness(100%);
+  }
+
+  &__article {
+    display: flex;
+    flex-direction: column;
+    background-color: #f6aa1c;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  &__content {
+    /*     background-color: blueviolet;
+    max-height: 10em;
+    text-align: center;
+    padding: 1em; */
+    margin: 1em;
+    background-color: #bc3908;
+    text-align: center;
+    color: #f6aa1c;
+    min-height: 7em;
+    padding: 0.5em;
+    font-size: 0.8em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  @media (max-width: 1200px) {
+    &__content {
+      font-size: 0.6em;
+    }
+  }
+}
